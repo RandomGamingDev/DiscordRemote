@@ -9,7 +9,9 @@ import os
 print("Loading Discord Client...")
 
 TOKEN = "";#Enter your bot token here
-client = discord.Client()
+intents = discord.Intents.default()
+intents.message_content = True
+client = discord.Client(intents=intents)
 guilds = []
 showChat = False;
 
